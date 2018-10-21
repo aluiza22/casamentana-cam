@@ -24,12 +24,12 @@ class App extends Component {
 const Home = () => (
   <div className="sepScr">
     <div className="optC">
-        <FontAwesome name='camera' size='2x' /> 
-        <Link to="/camera">Take a photo</Link>
+         <Link to="/camera"><FontAwesome name='camera' size='2x' /> 
+        Take a photo</Link>
     </div>
     <div  className="optG">
-        <FontAwesome name='image' size='2x' /> 
-        <Link to="/gallery">Import from gallery</Link>
+        <Link to="/gallery"><FontAwesome name='image' size='2x' />
+        Import from gallery</Link>
     </div>
   </div>
 );

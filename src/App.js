@@ -3,13 +3,15 @@ import Camera from 'react-html5-camera-photo';
 import 'react-html5-camera-photo/build/css/index.css';
 import ImageUploader from 'react-images-upload';
 import { BrowserRouter, Route, Link } from 'react-router-dom';
+import FontAwesome from 'react-fontawesome';
+import './font-awesome.min.css';
 import './App.css';
 
 class App extends Component {
   render() {
     return (
       <BrowserRouter>
-        <div>
+        <div className="App">
           <Route exact path="/" component={Home} />
           <Route path="/camera" component={Cam} />
           <Route path="/gallery" component={Gallery} />
@@ -20,15 +22,15 @@ class App extends Component {
 }
 
 const Home = () => (
-  <div>
-    <ul>
-      <li>
+  <div className="sepScr">
+    <div className="optC">
+        <FontAwesome name='camera' size='2x' /> 
         <Link to="/camera">Take a photo</Link>
-      </li>
-      <li>
+    </div>
+    <div  className="optG">
+        <FontAwesome name='image' size='2x' /> 
         <Link to="/gallery">Import from gallery</Link>
-      </li>
-    </ul>
+    </div>
   </div>
 );
 
